@@ -1,7 +1,7 @@
 #!/bin/bash
 cd "$(dirname "${BASH_SOURCE[0]}")" || exit
 
-venv_name="rtl_venv"
+venv_name="dgd_venv"
 
 if [ ! -d ../${venv_name} ]; then
     pyenv install 3.11 --skip-existing
@@ -10,7 +10,7 @@ if [ ! -d ../${venv_name} ]; then
     poetry install
 fi
 
-source rtl_venv/bin/activate
+source dgd_venv/bin/activate
 export PYTHONPYCACHEPREFIX=/tmp/pycache
 export PYTHONPATH="$(pwd)"
 
