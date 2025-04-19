@@ -15,7 +15,7 @@ export PYTHONPYCACHEPREFIX=/tmp/pycache
 export PYTHONPATH="$(pwd)"
 
 # # Enable open source tools.
-source ${HOME}/embedded/oss-cad-suite/environment
+# source ${HOME}/embedded/oss-cad-suite/environment
 
 # # Enable Xilinx.
 # export XILINX_INSTALL_PATH="${HOME}/embedded/_xilinx/"
