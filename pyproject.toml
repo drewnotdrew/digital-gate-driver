@@ -1,0 +1,18 @@
+[project]
+name = "digital-gate-driver"
+version = "0.1.0"
+description = "PWM-controlled digital gate driver for a flyback converter"
+authors = [{ name = "Drew Pang, Mia Chevere, Allyson Hur" }]
+readme = "README.md"
+
+[tool.poetry]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.11"
+cocotb = "^1.9.2"
+cocotb-test = "^0.2.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
