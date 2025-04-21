@@ -5220,7 +5220,7 @@
 	)
 	(text "DIGITAL GATE DRIVER"
 		(exclude_from_sim no)
-		(at 154.178 31.242 0)
+		(at 151.638 31.242 0)
 		(effects
 			(font
 				(size 3 3)
@@ -6460,7 +6460,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
 			(at 233.172 130.81 90)
 			(effects
 				(font
@@ -9643,7 +9643,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
 			(at 164.592 80.01 90)
 			(effects
 				(font
