@@ -1532,7 +1532,7 @@
 						)
 					)
 				)
-				(number ""
+				(number "1"
 					(effects
 						(font
 							(size 1 1)
@@ -1550,7 +1550,7 @@
 						)
 					)
 				)
-				(number ""
+				(number "2"
 					(effects
 						(font
 							(size 1 1)
@@ -1560,7 +1560,7 @@
 			)
 		)
 	)
-	(symbol "UC27531"
+	(symbol "UCC27531"
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -1572,7 +1572,7 @@
 				)
 			)
 		)
-		(property "Value" "UC27531"
+		(property "Value" "UCC27531"
 			(at 7.366 -9.652 0)
 			(effects
 				(font
@@ -1634,7 +1634,7 @@
 				(hide yes)
 			)
 		)
-		(symbol "UC27531_1_1"
+		(symbol "UCC27531_1_1"
 			(rectangle
 				(start -7.62 6.35)
 				(end 7.62 -6.35)
