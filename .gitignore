@@ -69,3 +69,6 @@ sim_build/
 *.jou
 .Xil/
 clock_info*.txt
+
+# kicad
+*.lck
