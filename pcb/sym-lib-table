@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "digital-gate-driver")(type "KiCad")(uri "${KIPRJMOD}/lib/digital-gate-driver.kicad_sym")(options "")(descr ""))
+)
