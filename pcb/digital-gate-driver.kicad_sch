@@ -5560,7 +5560,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "MountingHole:MountingHole_2.5mm_Pad_Via"
 			(at 57.15 185.42 0)
 			(effects
 				(font
@@ -8733,7 +8733,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "digital-gate-driver:UCC2753DBVT"
 			(at 128.27 53.086 0)
 			(effects
 				(font
@@ -8833,7 +8833,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "MountingHole:MountingHole_2.5mm_Pad_Via"
 			(at 82.55 171.45 0)
 			(effects
 				(font
@@ -8966,7 +8966,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "MountingHole:MountingHole_2.5mm_Pad_Via"
 			(at 82.55 185.42 0)
 			(effects
 				(font
@@ -9983,7 +9983,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "MountingHole:MountingHole_2.5mm_Pad_Via"
 			(at 57.15 171.45 0)
 			(effects
 				(font
