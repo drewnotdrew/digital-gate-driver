@@ -69,3 +69,10 @@ sim_build/
 *.jou
 .Xil/
 clock_info*.txt
+
+# kicad
+*.lck
+*.bak
+\#auto_saved_files\#
+fp-info-cache
+*-backups/

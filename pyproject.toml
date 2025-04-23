@@ -12,6 +12,8 @@ package-mode = false
 python = "^3.11"
 cocotb = "^1.9.2"
 cocotb-test = "^0.2.5"
+matplotlib = "^3.10.1"
+pandas = "^2.2.3"
 
 [build-system]
 requires = ["poetry-core"]
