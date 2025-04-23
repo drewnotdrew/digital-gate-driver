@@ -76,3 +76,4 @@ clock_info*.txt
 \#auto_saved_files\#
 fp-info-cache
 *-backups/
+_autosave-*
