@@ -575,6 +575,121 @@
 				)
 			)
 		)
+		(symbol "Connector:TestPoint_Probe"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0.762) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "TP"
+				(at 1.651 5.842 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TestPoint_Probe"
+				(at 1.651 4.064 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "test point (alternative probe-style design)"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "test point tp"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Pin* Test*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "TestPoint_Probe_0_1"
+				(polyline
+					(pts
+						(xy 1.27 0.762) (xy 0 0) (xy 0.762 1.27) (xy 1.27 0.762)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.397 0.635) (xy 0.635 1.397) (xy 2.413 3.175) (xy 3.175 2.413) (xy 1.397 0.635)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "TestPoint_Probe_1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 0)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Device:C"
 			(pin_numbers hide)
 			(pin_names
@@ -3980,6 +4095,12 @@
 		(uuid "7d1f617a-dfdb-42a3-bfb3-76a405eaf321")
 	)
 	(junction
+		(at 156.21 60.96)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8b42ca5a-689d-4515-9749-6b0c4152e80b")
+	)
+	(junction
 		(at 234.95 134.62)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4014,6 +4135,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ee4286dd-4d65-4508-8f6a-e5f49d2c73d8")
+	)
+	(junction
+		(at 184.15 135.89)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f84eae0e-363f-40a5-a1cf-47a4699a99fe")
 	)
 	(no_connect
 		(at 80.01 137.16)
@@ -4216,16 +4343,6 @@
 			(type default)
 		)
 		(uuid "26e52275-c68d-479d-a079-bda40d9ddb2f")
-	)
-	(wire
-		(pts
-			(xy 128.27 73.66) (xy 129.54 73.66)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2816bec9-ee92-44f3-9055-97a3ffe3a070")
 	)
 	(wire
 		(pts
@@ -5192,17 +5309,6 @@
 		)
 		(uuid "209554a1-500e-4761-9be5-f6cf91ead0e8")
 	)
-	(text "TODO: Spec R6 and R7"
-		(exclude_from_sim no)
-		(at 165.862 160.274 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "2f630412-cbfb-486a-aa54-d0ecd3430013")
-	)
 	(text "DIGITAL GATE DRIVER"
 		(exclude_from_sim no)
 		(at 151.638 31.242 0)
@@ -5214,6 +5320,17 @@
 			)
 		)
 		(uuid "3d917b89-8568-4ed0-bcd3-9f431b56afad")
+	)
+	(text "INA180A1 \nOffset voltage: +-25uV typ\nA1: 20V/V amplification\nVref ~0.1V, secondary shunt+ 0.1/20 = 0.005\nCurrent through shunt: 0.005/0.05 = 0.1A"
+		(exclude_from_sim no)
+		(at 207.01 148.336 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "4a9f879e-6db0-4f87-a2ab-c34167e256d6")
 	)
 	(text "TODO: spec hole sizes"
 		(exclude_from_sim no)
@@ -5228,7 +5345,7 @@
 	)
 	(text "Vref\nRV1 nominal 1k, Vref 0.1V nominal"
 		(exclude_from_sim no)
-		(at 200.914 148.082 0)
+		(at 179.324 157.48 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5246,6 +5363,17 @@
 			)
 		)
 		(uuid "7982978b-8d40-4a82-8498-a1c395bf3401")
+	)
+	(text "R6 & R7 form comparator hysteresis\n\nLow -> high: INA output must be:\nVref + (R6 / (R6 + R7)) * Vref\n0.1 + (1 / (1 + 32)) * 0.1 = 103mV\n\nHigh -> low: INA output must be:\nVref - (R6 / (R6 + R7)) * Vref = 97mV\n\n6mV hysteresis"
+		(exclude_from_sim no)
+		(at 127.508 165.608 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "7f456b28-2d57-44e7-8a01-8ed68eb3f564")
 	)
 	(text "SECONDARY COIL CONDUCTION DETECT"
 		(exclude_from_sim no)
@@ -5343,7 +5471,7 @@
 		(uuid "6958a2f0-b3a7-4997-91d3-71cc33973dc1")
 	)
 	(label "GATE_IN"
-		(at 109.22 63.5 0)
+		(at 109.22 66.04 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5413,7 +5541,7 @@
 		(uuid "b200c978-245e-41ce-af8a-3c8607d7fb85")
 	)
 	(label "GATE_EN"
-		(at 109.22 66.04 0)
+		(at 109.22 63.5 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5716,6 +5844,74 @@
 			(project "digital-gate-driver"
 				(path "/89f53e89-caa4-45a9-a280-ec277a232676"
 					(reference "#PWR4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Probe")
+		(at 184.15 135.89 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1a9d6ce7-6cd3-4355-bee3-f2a33efc41d3")
+		(property "Reference" "TP5"
+			(at 187.96 134.3024 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint_Probe"
+			(at 187.96 135.5724 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "digital-gate-driver:TP_SMD"
+			(at 189.23 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 189.23 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point (alternative probe-style design)"
+			(at 184.15 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d94ead84-2e10-4a43-85b8-0605b96be8ae")
+		)
+		(instances
+			(project ""
+				(path "/89f53e89-caa4-45a9-a280-ec277a232676"
+					(reference "TP5")
 					(unit 1)
 				)
 			)
@@ -6354,6 +6550,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint_Probe")
+		(at 156.21 60.96 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3206739e-a757-4791-a2fc-fd8e5ef83ed6")
+		(property "Reference" "TP7"
+			(at 154.6225 55.88 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint_Probe"
+			(at 155.8924 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "digital-gate-driver:TP_SMD"
+			(at 156.21 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 156.21 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point (alternative probe-style design)"
+			(at 156.21 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a0251a3b-616d-467c-ad85-440faee5520e")
+		)
+		(instances
+			(project "digital-gate-driver"
+				(path "/89f53e89-caa4-45a9-a280-ec277a232676"
+					(reference "TP7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 234.95 130.81 0)
 		(unit 1)
@@ -6570,15 +6833,15 @@
 		(dnp no)
 		(uuid "4b7dc506-d8cb-44a1-9949-885e13b06d9c")
 		(property "Reference" "R7"
-			(at 172.72 156.21 90)
+			(at 172.72 154.94 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "~"
-			(at 171.4501 149.86 0)
+		(property "Value" "32k"
+			(at 170.942 156.972 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6852,6 +7115,73 @@
 			(project "digital-gate-driver"
 				(path "/89f53e89-caa4-45a9-a280-ec277a232676"
 					(reference "#PWR24")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Probe")
+		(at 140.97 60.96 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "53ca1a3f-f199-4b64-9f19-75f186c9cc3d")
+		(property "Reference" "TP6"
+			(at 139.3825 55.88 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint_Probe"
+			(at 140.6524 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "digital-gate-driver:TP_SMD"
+			(at 140.97 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 140.97 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point (alternative probe-style design)"
+			(at 140.97 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6e5df19c-1059-42ec-a1ae-6928c7c073ef")
+		)
+		(instances
+			(project "digital-gate-driver"
+				(path "/89f53e89-caa4-45a9-a280-ec277a232676"
+					(reference "TP6")
 					(unit 1)
 				)
 			)
@@ -8403,7 +8733,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 129.54 73.66 0)
+		(at 128.27 73.66 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8412,7 +8742,7 @@
 		(fields_autoplaced yes)
 		(uuid "a262bdac-0cfd-412c-b2ba-ba45ad8bf5a2")
 		(property "Reference" "#PWR3"
-			(at 129.54 80.01 0)
+			(at 128.27 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8421,7 +8751,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 129.54 78.74 0)
+			(at 128.27 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8429,7 +8759,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 129.54 73.66 0)
+			(at 128.27 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8438,7 +8768,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 129.54 73.66 0)
+			(at 128.27 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8447,7 +8777,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 129.54 73.66 0)
+			(at 128.27 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8706,10 +9036,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "b09b65b4-7e58-48bf-a526-77867f0de4d3")
 		(property "Reference" "U4"
-			(at 130.2784 53.34 0)
+			(at 115.316 73.152 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8718,7 +9047,7 @@
 			)
 		)
 		(property "Value" "UCC27531"
-			(at 130.2784 55.88 0)
+			(at 115.316 75.692 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9274,15 +9603,15 @@
 		(dnp no)
 		(uuid "c55dae24-592d-4136-941f-64116e920277")
 		(property "Reference" "R6"
-			(at 207.01 127 90)
+			(at 207.01 133.35 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "~"
-			(at 208.2799 133.35 0)
+		(property "Value" "1k"
+			(at 208.28 135.128 90)
 			(effects
 				(font
 					(size 1.27 1.27)
