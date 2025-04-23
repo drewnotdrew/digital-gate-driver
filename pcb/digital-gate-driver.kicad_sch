@@ -5332,17 +5332,6 @@
 		)
 		(uuid "4a9f879e-6db0-4f87-a2ab-c34167e256d6")
 	)
-	(text "TODO: spec hole sizes"
-		(exclude_from_sim no)
-		(at 87.122 193.294 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "6002061f-c9cc-44fd-a62d-654ca85abd48")
-	)
 	(text "Vref\nRV1 nominal 1k, Vref 0.1V nominal"
 		(exclude_from_sim no)
 		(at 179.324 157.48 0)
