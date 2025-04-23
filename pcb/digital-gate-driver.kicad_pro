@@ -237,12 +237,7 @@
     "equivalence_files": []
   },
   "erc": {
-    "erc_exclusions": [
-      "lib_symbol_issues|1181100|1219200|e6021f7b-7f92-40d1-9886-66087227c811|00000000-0000-0000-0000-000000000000|||",
-      "lib_symbol_issues|1574800|685800|2e3c1702-8d05-47a6-a745-b3b1e1d4fc57|00000000-0000-0000-0000-000000000000|||",
-      "lib_symbol_issues|1739900|1193800|07f104d0-271d-4fbc-ae61-ab9d3a9936a7|00000000-0000-0000-0000-000000000000|||",
-      "lib_symbol_issues|1816100|850900|1f5f414b-3078-4f88-a782-65b043c8548a|00000000-0000-0000-0000-000000000000|||"
-    ],
+    "erc_exclusions": [],
     "meta": {
       "version": 0
     },
@@ -492,7 +487,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "digital-gate-driver-out/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "",
