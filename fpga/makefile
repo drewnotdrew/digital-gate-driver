@@ -50,9 +50,9 @@ include hdl/components.mk
 	@echo "DEPS: ${$*_DEPS}"
 	@echo "________________________________________________"
 	SYNTH_HDL_SRCS="${$*_SRCS}" FPGA_PART_NO=${FPGA_PART_NO} XDC_FILE="${$*_XDC}" SYNTH_TOP_MODULE="$*" ${VIVADO} ../scripts/synthesis_place_route.tcl || true
-	mv vivado.log log/vivado_$*.log || true
-	mv vivado.jou log/vivado_$*.jou || true
-	mv clockInfo.txt log/clock_info_$*.txt || true
+	mv vivado.log logs/vivado_$*.log || true
+	mv vivado.jou logs/vivado_$*.jou || true
+	mv clockInfo.txt logs/clock_info_$*.txt || true
 
 test_rule:
 	echo test
