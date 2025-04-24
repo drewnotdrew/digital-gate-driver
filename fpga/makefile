@@ -41,16 +41,18 @@ include hdl/components.mk
 	echo ${$*_TOP}
 
 # Generate a bitstream
-%.bit: scripts/synthesis_place_route.tcl $${%_TOP} $${_XDC} $${%_SRCS} $${%_DEPS}
-	@echo "################################################"
+%.bit: ../scripts/synthesis_place_route.tcl $${%_TOP} $${_XDC} $${%_SRCS} $${%_DEPS}
+	@echo "________________________________________________"
 	@echo "Building $*"
 	@echo "TOP: ${$*_TOP}"
 	@echo "XDC: ${$*_XDC}"
 	@echo "SRCS: ${$*_SRCS}"
 	@echo "DEPS: ${$*_DEPS}"
-	@echo "################################################"
-	SYNTH_HDL_SRCS="${$*_SRCS}" FPGA_PART_NO=${FPGA_PART_NO} XDC_FILE="${$*_XDC}" SYNTH_TOP_MODULE="$*" ${VIVADO} scripts/synthesis_place_route.tcl
-	cp vivado.log vivado_$*.log
+	@echo "________________________________________________"
+	SYNTH_HDL_SRCS="${$*_SRCS}" FPGA_PART_NO=${FPGA_PART_NO} XDC_FILE="${$*_XDC}" SYNTH_TOP_MODULE="$*" ${VIVADO} ../scripts/synthesis_place_route.tcl || true
+	mv vivado.log log/vivado_$*.log || true
+	mv vivado.jou log/vivado_$*.jou || true
+	mv clockInfo.txt log/clock_info_$*.txt || true
 
 test_rule:
 	echo test
