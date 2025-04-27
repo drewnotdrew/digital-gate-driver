@@ -49,6 +49,7 @@ include hdl/components.mk
 	@echo "SRCS: ${$*_SRCS}"
 	@echo "DEPS: ${$*_DEPS}"
 	@echo "________________________________________________"
+	mkdir -p logs bit
 	SYNTH_HDL_SRCS="${$*_SRCS}" FPGA_PART_NO=${FPGA_PART_NO} XDC_FILE="${$*_XDC}" SYNTH_TOP_MODULE="$*" ${VIVADO} ../scripts/synthesis_place_route.tcl || true
 	mv vivado.log logs/vivado_$*.log || true
 	mv vivado.jou logs/vivado_$*.jou || true
