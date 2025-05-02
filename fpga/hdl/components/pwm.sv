@@ -25,22 +25,25 @@ initial counter = 0;
 // bonus: out should be fully zero at duty = 0, and fully 1 (always on) at duty = 2^N-1;
 // You can use behavioural combinational logic, but try to keep your sequential
 //   and combinational blocks as separate as possible.
-always_ff @(posedge clk) begin: PWM
-  if (counter > 8'b11110000)
+always_ff @( posedge clk) begin 
+  if (rst)
+    counter <= 0;
+  else if (counter >= 240)
     counter <= '0;
   else
     counter <= counter + 1;
+end
+
+always_ff @(posedge clk) begin: PWM
   if (rst) begin
     out <= 0;
-    counter <= 0;
   end else if (ena) begin
-    
     if (counter < duty) begin
       out <= 1;
       // counter <= counter + 1;
     end else if (counter > duty & duty != totalDuty)  begin
       out <= 0;
-      counter <= counter + 1;
+      // counter <= counter + 1;
     end else if (duty != totalDuty) begin
       out <= 0;
       // counter <= counter + 1;
