@@ -11,7 +11,7 @@ input wire ena; // Enables the output.
 // input wire step; // Enables the internal counter. You should only increment when this signal is high (this is how we slow down the PWM to reasonable speeds).
 input wire [N-1:0] duty; // The "duty cycle" input.
 output logic out;
-int totalDuty = 2**N-1;
+localparam totalDuty = 2**N-1;
 logic [N-1:0] counter;
 
 initial out = 0;
@@ -34,7 +34,7 @@ always_ff @(posedge clk) begin: PWM
     if (counter < duty) begin
       out <= 1;
       // counter <= counter + 1;
-    end else if (counter > duty & duty != duty[N-1])  begin
+    end else if (counter > duty & duty != totalDuty)  begin
       out <= 0;
       counter <= counter + 1;
     end else if (duty != totalDuty) begin

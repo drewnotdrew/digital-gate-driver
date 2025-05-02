@@ -21,7 +21,7 @@ module pwm_tb (
       duty <= 8'd0;
     end else begin
       ena <= 1;
-      duty <= 0b'10000000; 
+      duty <= 8'b10000000; 
     end
   end
 
