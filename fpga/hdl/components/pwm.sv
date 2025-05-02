@@ -3,7 +3,7 @@
 */
 
 module pwm(clk, rst, ena, duty, out);
-
+timeunit 1ns; timeprecision 100ps;
 parameter N = 8;
 
 input wire clk, rst;
@@ -26,11 +26,15 @@ initial counter = 0;
 // You can use behavioural combinational logic, but try to keep your sequential
 //   and combinational blocks as separate as possible.
 always_ff @(posedge clk) begin: PWM
-  counter <= counter + 1;
+  if (counter > 8'b11110000)
+    counter <= '0;
+  else
+    counter <= counter + 1;
   if (rst) begin
     out <= 0;
     counter <= 0;
   end else if (ena) begin
+    
     if (counter < duty) begin
       out <= 1;
       // counter <= counter + 1;
