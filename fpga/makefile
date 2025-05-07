@@ -2,7 +2,7 @@
 VIVADO=vivado -mode batch -source
 
 # Available bitstreams; used for .PHONY
-BITSTREAMS=flip_flop.bit
+BITSTREAMS=flip_flop.bit pwm.bit pwm_tb.bit
 PROGRAM_TARGETS=$(BITSTREAMS:%.bit=%.program)
 TARGET_DIRECTORY=NULL
 
@@ -53,7 +53,7 @@ include hdl/components.mk
 	SYNTH_HDL_SRCS="${$*_SRCS}" FPGA_PART_NO=${FPGA_PART_NO} XDC_FILE="${$*_XDC}" SYNTH_TOP_MODULE="$*" ${VIVADO} ../scripts/synthesis_place_route.tcl || true
 	mv vivado.log logs/vivado_$*.log || true
 	mv vivado.jou logs/vivado_$*.jou || true
-	mv clockInfo.txt logs/clock_info_$*.txt || true
+# mv clockInfo.txt logs/clock_info_$*.txt || true
 
 test_rule:
 	echo test
